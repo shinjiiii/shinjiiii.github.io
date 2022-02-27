@@ -1,5 +1,93 @@
-h1{
+/* common */
+/* 長くなるので、「common」「header」「main」「footer」で分けるようにコメントしておくと便利！ */
+
+body{
+  margin:0;
+}
+
+img{
+  vertical-align: bottom;
+}
+/* デフォルトでimgは、baselineに揃えられるため、bottomに合わせる！ */
+
+h1, h2, p{
+  margin: 0;
+}
+
+/* header */
+
+header {
+  background: #efefef;
+}
+
+header .container{
+  margin: 0 auto;
+  width: 400px;
+   /* 最初は領域がわかりやすいようにoutlineを付けると便利！ */
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+}
+
+header h1{
+  font-weight: normal;
   font-size: 24px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #add;
+}
+
+header ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header ul li + li{
+  margin-left: 8px;
+}
+
+header div + div{
+  margin-left: 32px;
+}
+
+header .icon{
+  border-radius: 50%;
+}
+
+/* main */
+
+main .container{
+  width: 400px;
+  margin: 0 auto;
+}
+
+main h1{
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+  padding: 60px;
+  /* marginとpaddingどちらでも良い場合は、marginの相殺が起きると面倒なので、paddingを選ぶ！ */
+}
+
+main h2{
+  font-weight: normal;
+  font-size: 20px;
+  padding-top: 16px;
+}
+
+main p{
+  line-height: 1.8;
+  padding-top: 16px;
+}
+
+main section + section{
+  margin-top: 60px;
+  /* 将来的に背景色などを付けるときにpaddingだと微妙だからmarginにした！ */
+}
+
+/* footer */
+
+footer{
+  padding: 60px 0;
+  text-align: center;
+  color: #aaa;
 }
